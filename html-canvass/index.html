@@ -1,0 +1,104 @@
+  
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HTML CANVASS</title>
+
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<style>
+			body{
+				background-color: purple;
+			}
+			#lense{
+				margin-left: 400px;
+			}
+			#myCanvas{
+				margin-left: 390px;
+			}
+			p{
+				text-align: center;
+				text-shadow: 2px 2px 4px red;
+				font-weight: bolder;
+			}
+			h3{
+				margin-left: 170px;
+				font-weight: bolder;
+				color:white;
+			}
+		</style>
+	</head>
+<body>
+
+	<div class="navbar navbar-inverse">
+    <div class="container">
+
+      <div class="navbar-header">
+      
+        <!-- <a href="" class="navbar-brand">HTML CANVASS CAN DRAW IMAGE AS SEEN BELOW</a> -->
+        <h3>HTML CANVASS CAN DRAW IMAGE AS SEEN BELOW</h3>
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+          <!-- <span class="sr-only">Toggle navigation</span> -->
+
+          <!-- <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+ -->          
+        </button>
+
+      </div>
+
+      <div class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav">
+
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+
+        </ul>
+
+      </div>
+ 
+    </div>
+
+  </div>
+
+
+<p>Image to use:</p>
+<img id="lense" src="centerimage.jpg" alt="Hand Lense" width="220" height="277">
+
+<p>Canvas to fill:</p>
+<canvas id="myCanvas" width="250" height="300"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<p><button onclick="myCanvas()">Click me</button></p>
+
+<script>
+function myCanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("lense");
+    ctx.drawImage(img,10,10);
+}
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
